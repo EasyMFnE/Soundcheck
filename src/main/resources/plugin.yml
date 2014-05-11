@@ -1,0 +1,74 @@
+name: Soundcheck
+version: '1.0'
+description: Use commands to play sounds and effects
+
+author: EasyMFnE
+
+database: false
+main: net.easymfne.soundcheck.Soundcheck
+load: POSTWORLD
+
+commands:
+  soundcheck:
+    aliases: [sc]
+    description: Soundcheck main command
+    permission: soundcheck.command.soundcheck
+    permission-message: 'Unknown command. Type "/help" for help.'
+    usage: |
+           /soundcheck help - Display command list and details
+           /soundcheck reload - Reload configuration from disk
+  playsound:
+    aliases: [sound]
+    description: Play individual sounds
+    permission: soundcheck.command.playsound
+    permission-message: 'Unknown command. Type "/help" for help.'
+    usage: 'For help, use "/playsound help"'
+  playfx:
+    aliases: [fx]
+    description: Play individual effects
+    permission: soundcheck.command.playfx
+    permission-message: 'Unknown command. Type "/help" for help.'
+    usage: 'For help, use "/playfx help"'
+  playefx:
+    aliases: [efx]
+    description: Play individual entity-effects
+    permission: soundcheck.command.playefx
+    permission-message: 'Unknown command. Type "/help" for help.'
+    usage: 'For help, use "/playefx help"'
+  sequence:
+    aliases: [seq]
+    description: Play configured sound/effect sequences
+    permission: soundcheck.command.sequence
+    permission-message: 'Unknown command. Type "/help" for help.'
+    usage: 'For help, use "/sequence help"'
+
+permissions:
+  soundcheck.all:
+    default: op
+    description: Grants all permissions
+    children:
+      soundcheck.command.shoundcheck: true
+      soundcheck.command.playsound: true
+      soundcheck.command.playfx: true
+      soundcheck.command.playefx: true
+      soundcheck.command.sequence: true
+  
+  soundcheck.command.shoundcheck:
+    default: false
+    description: Allow use of /soundcheck command
+  
+  soundcheck.command.playsound:
+    default: false
+    description: Allow use of /playsound command
+  
+  soundcheck.command.playfx:
+    default: false
+    description: Allow use of /playfx command
+  
+  soundcheck.command.playefx:
+    default: false
+    description: Allow use of /playefx command
+  
+  soundcheck.command.sequence:
+    default: false
+    description: Allow use of /sequence command

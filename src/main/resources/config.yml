@@ -1,0 +1,25 @@
+################################################################################
+# This file is part of the Soundcheck plugin by EasyMFnE.                      #
+# ---------------------------------------------------------------------------- #
+# Sequences are defined with a list of frames, where each frame of the list    #
+# defines a 'time' integer (in ticks) along with one or both of:               #
+# 'sound' in the format "NAME:volume:pitch" where volume and pitch are numbers #
+#       (volume 0.0 is silent, volume 1.0 is normal volume)                    #
+#       (pitch: 0.5-2.0, where 0.5 is deeper and 2.0 is higher)                #
+# 'effect' in the format "NAME:data:radius" where data and radius are integers #
+#       (data is for things like which block is used for STEP_SOUND effect. If #
+#           unknown, use 0 or 1)                                               #
+#       (radius is the range in which the effect will be rendered for users)   #
+################################################################################
+
+sequence:
+  testsequence:
+    - time: 0
+      sound: EXPLODE:1:1
+      effect: EXPLOSION:0:160
+    - time: 10
+      sound: EXPLODE:1:0.75
+      effect: EXPLOSION_LARGE:0:160
+    - time: 20
+      sound: EXPLODE:1:0.5
+      effect: EXPLOSION_HUGE:0:160
