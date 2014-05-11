@@ -44,13 +44,13 @@ Soundcheck has six permission nodes:
 
 DeadHorses has five commands, `/deadhorses` (Alias `/dh`)
 
-* `/soundcheck`
+* `/soundcheck` (Alias: `/sc`)
     * `/soundcheck help` - Show available commands.
     * `/soundcheck reload` - Reload configuration from disk.
-* `/playsound <sound> [location]...` - Play a specific sound.
-* `/playfx <effect> [location]...` - Play a specific effect.
-* `/playefx <entity_effect> [player]` - Play a specific entity effect.
-* `/sequence <sequence> [location]...` - Play a defined sequence.
+* `/playsound <sound> [location]...` - Play a specific sound. (Alias: `/sound`)
+* `/playfx <effect> [location]...` - Play a specific effect. (Alias: `/fx`)
+* `/playefx <entity_effect> [player]` - Play a specific entity effect. (Alias: `/efx`)
+* `/sequence <sequence> [location]...` - Play a defined sequence. (Alias: `/seq`)
 
 The above commands, excluding `/soundcheck` each also accept the subcommands:
 
